@@ -1,0 +1,48 @@
+server:
+  address: 127.0.0.1
+  port: 8081
+config:
+  url: localhost
+spring:
+  redis:
+    host: 192.168.57.176
+    port: 6379
+    pool:
+      max-active: 1000
+      max-idle: 100
+      min-idle: 0
+      max-wait: 10000
+    timeout: 2000
+  aop:
+    auto: true
+  datasource:
+    url: jdbc:mysql://192.168.1.103:3306/baby?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    #控制读取sql文件是哪个
+    platform: debug
+    #是否进行脚本初始化
+    initialize: true
+logging:
+  level:
+    root: info
+    com:
+      piggsoft: debug
+      mybatis: debug
+      springframework:
+        web: debug
+mybatis:
+  config: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath*:mybatis/xml/*Mapper.xml
+  type-aliases-package: com.piggsoft.*.model
+---
+spring:
+  profiles: test
+server:
+  address: 192.168.1.120
+---
+spring:
+  profiles: pro
+server:
+  address: 192.168.1.120
