@@ -6,6 +6,7 @@ package com.piggsoft.constants;
 public class ErrorInfo {
 
     public static final ErrorInfo PHONE_HAD_EXISTS = create("1001", "该手机号已经注册过");
+    public static final ErrorInfo PHONE_OR_PASSWORD_WRONG = create("1002", "手机号或者密码错误");
 
     private String code;
     private String msg;
