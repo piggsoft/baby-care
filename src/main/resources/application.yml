@@ -16,14 +16,14 @@ spring:
   aop:
     auto: true
   datasource:
-    url: jdbc:mysql://192.168.1.103:3306/baby?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/baby_care?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 123456
+    password: root
     #控制读取sql文件是哪个
     platform: debug
     #是否进行脚本初始化
-    initialize: true
+    initialize: false
 logging:
   level:
     root: info
