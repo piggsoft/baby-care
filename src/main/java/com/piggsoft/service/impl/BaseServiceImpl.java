@@ -5,6 +5,7 @@ import com.piggsoft.service.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.common.Mapper;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -44,5 +45,13 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
     public List<T> getAll() {
         return mapper.selectAll();
+    }
+
+    public List<T> selectByExample(Example example) {
+        return mapper.selectByExample(example);
+    }
+
+    public T selectOne(T t) {
+        return mapper.selectOne(t);
     }
 }
