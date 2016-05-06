@@ -1,6 +1,7 @@
 package com.piggsoft.service.impl;
 
 import com.piggsoft.model.Baby;
+import com.piggsoft.service.BabyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Service;
  * Created by zxshen2 on 2016/5/6.
  */
 @Service
-public class BabyServiceImpl extends BaseServiceImpl<Baby> implements com.piggsoft.service.BabyService {
+public class BabyServiceImpl extends BaseServiceImpl<Baby> implements BabyService {
     @Autowired
     private Baby baby;
 
