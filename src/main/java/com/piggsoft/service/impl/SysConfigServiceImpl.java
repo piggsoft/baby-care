@@ -19,13 +19,15 @@ public class SysConfigServiceImpl extends BaseServiceImpl<Sysconfig> implements 
 
     @Override
     public int update(Sysconfig entity) {
+        int i = super.update(entity);
         sysConfigs.update(entity);
-        return super.update(entity);
+        return i;
     }
 
     @Override
     public int save(Sysconfig entity) {
+        int i = super.save(entity);
         sysConfigs.update(entity);
-        return super.save(entity);
+        return i;
     }
 }
