@@ -27,6 +27,8 @@
         <mybatis.generator.version>1.3.2</mybatis.generator.version>
         <durid.version>1.0.2</durid.version>
         <commons.lange3.version>3.4</commons.lange3.version>
+        <commons.collections.version>3.2.2</commons.collections.version>
+        <commons.codec.version>1.10</commons.codec.version>
     </properties>
 
     <dependencies>
@@ -88,7 +90,12 @@
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
-            <version>3.2.2</version>
+            <version>${commons.collections.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons.codec.version}</version>
         </dependency>
 
 
