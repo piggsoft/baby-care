@@ -4,6 +4,7 @@ import com.piggsoft.constants.ErrorInfo;
 import com.piggsoft.exception.ServiceException;
 import com.piggsoft.model.User;
 import com.piggsoft.service.UserService;
+import com.piggsoft.utils.IdUtils;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.stereotype.Service;
 
