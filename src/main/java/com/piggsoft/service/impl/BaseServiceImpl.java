@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.piggsoft.service.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.entity.Example;
 
@@ -21,14 +22,17 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
     protected Mapper<T> mapper;
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public int save(T entity){
         return mapper.insertSelective(entity);
     }
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public int delete(T entity){
         return mapper.deleteByPrimaryKey(entity);
     }
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public int update(T entity) {return mapper.updateByPrimaryKeySelective(entity);}
 
     /**

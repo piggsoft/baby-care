@@ -28,9 +28,7 @@ CREATE TABLE IF NOT EXISTS `action` (
   CONSTRAINT `FK_action_baby` FOREIGN KEY (`baby_id`) REFERENCES `baby` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 正在导出表  baby_care.action 的数据：~0 rows (大约)
-/*!40000 ALTER TABLE `action` DISABLE KEYS */;
-/*!40000 ALTER TABLE `action` ENABLE KEYS */;
+-- 数据导出被取消选择。
 
 
 -- 导出  表 baby_care.baby 结构
@@ -39,15 +37,13 @@ CREATE TABLE IF NOT EXISTS `baby` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `birthday` datetime NOT NULL,
-  `sex` char(1) NOT NULL,
+  `sex` char(5) NOT NULL,
   `create_tm` datetime NOT NULL,
-  `update_tm` datetime NOT NULL,
+  `update_tm` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 正在导出表  baby_care.baby 的数据：~0 rows (大约)
-/*!40000 ALTER TABLE `baby` DISABLE KEYS */;
-/*!40000 ALTER TABLE `baby` ENABLE KEYS */;
+-- 数据导出被取消选择。
 
 
 -- 导出  表 baby_care.relation_ship 结构
@@ -64,22 +60,7 @@ CREATE TABLE IF NOT EXISTS `relation_ship` (
   CONSTRAINT `FK__user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 正在导出表  baby_care.relation_ship 的数据：~0 rows (大约)
-/*!40000 ALTER TABLE `relation_ship` DISABLE KEYS */;
-/*!40000 ALTER TABLE `relation_ship` ENABLE KEYS */;
-
-
--- 导出  表 baby_care.sysconfig 结构
-DROP TABLE IF EXISTS `sysconfig`;
-CREATE TABLE IF NOT EXISTS `sysconfig` (
-  `sys_key` varchar(50) NOT NULL DEFAULT '0',
-  `sys_value` varchar(200) DEFAULT '0',
-  PRIMARY KEY (`sys_key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- 正在导出表  baby_care.sysconfig 的数据：~0 rows (大约)
-/*!40000 ALTER TABLE `sysconfig` DISABLE KEYS */;
-/*!40000 ALTER TABLE `sysconfig` ENABLE KEYS */;
+-- 数据导出被取消选择。
 
 
 -- 导出  表 baby_care.user 结构
@@ -90,14 +71,12 @@ CREATE TABLE IF NOT EXISTS `user` (
   `phone` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `create_tm` datetime NOT NULL,
-  `update_tm` datetime NOT NULL,
+  `update_tm` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `Index 2` (`phone`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 正在导出表  baby_care.user 的数据：~0 rows (大约)
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+-- 数据导出被取消选择。
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
