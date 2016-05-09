@@ -44,7 +44,7 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
     }
 
     @Override
-    public void login(String phone, String password) {
+    public User login(String phone, String password) {
         User user = new User();
         user.setPhone(phone);
         user.setPassword(DigestUtils.md5Hex(password));
@@ -52,5 +52,6 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
         if (queryResult == null) {//根据phone和密码未找到该用户信息
             throw new ServiceException(ErrorInfo.PHONE_OR_PASSWORD_WRONG);
         }
+        return user;
     }
 }
