@@ -5,7 +5,6 @@ import com.piggsoft.model.User;
 import com.piggsoft.service.UserService;
 import org.junit.Assert;
 import org.junit.Test;
-import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,6 +37,12 @@ public class UserServiceTest extends DemoApplicationTests {
         user.setPassword("123456");
         user.setCreateTm(new Date());
         userService.register(user);
+    }
+
+    @Test
+    public void testLogin() {
+        User user = userService.login("13600000000", "123456");
+        Assert.assertNotNull(user);
     }
 
 }
