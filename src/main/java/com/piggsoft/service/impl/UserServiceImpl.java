@@ -3,6 +3,7 @@ package com.piggsoft.service.impl;
 import com.piggsoft.constants.ErrorInfo;
 import com.piggsoft.exception.ServiceException;
 import com.piggsoft.model.User;
+import com.piggsoft.service.UserService;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.stereotype.Service;
 
