@@ -5,4 +5,6 @@ package com.piggsoft.service;
  */
 public interface ActionService {
     void addAction(Integer babyId, String actionType);
+
+    String[] getActionType();
 }

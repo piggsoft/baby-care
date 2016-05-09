@@ -22,6 +22,7 @@ public class ActionServiceImpl extends BaseServiceImpl<Action> implements Action
         super.save(action);
     }
 
+    @Override
     public String[] getActionType() {
         return Constants.ACTION_TYPE;
     }
