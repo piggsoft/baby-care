@@ -28,9 +28,7 @@ CREATE TABLE IF NOT EXISTS `action` (
   CONSTRAINT `FK_action_baby` FOREIGN KEY (`baby_id`) REFERENCES `baby` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 正在导出表  baby_care.action 的数据：~0 rows (大约)
-/*!40000 ALTER TABLE `action` DISABLE KEYS */;
-/*!40000 ALTER TABLE `action` ENABLE KEYS */;
+-- 数据导出被取消选择。
 
 
 -- 导出  表 baby_care.baby 结构
@@ -45,9 +43,7 @@ CREATE TABLE IF NOT EXISTS `baby` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 正在导出表  baby_care.baby 的数据：~0 rows (大约)
-/*!40000 ALTER TABLE `baby` DISABLE KEYS */;
-/*!40000 ALTER TABLE `baby` ENABLE KEYS */;
+-- 数据导出被取消选择。
 
 
 -- 导出  表 baby_care.relation_ship 结构
@@ -64,9 +60,7 @@ CREATE TABLE IF NOT EXISTS `relation_ship` (
   CONSTRAINT `FK__user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 正在导出表  baby_care.relation_ship 的数据：~0 rows (大约)
-/*!40000 ALTER TABLE `relation_ship` DISABLE KEYS */;
-/*!40000 ALTER TABLE `relation_ship` ENABLE KEYS */;
+-- 数据导出被取消选择。
 
 
 -- 导出  表 baby_care.user 结构
@@ -80,11 +74,9 @@ CREATE TABLE IF NOT EXISTS `user` (
   `update_tm` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `Index 2` (`phone`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 正在导出表  baby_care.user 的数据：~0 rows (大约)
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+-- 数据导出被取消选择。
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
