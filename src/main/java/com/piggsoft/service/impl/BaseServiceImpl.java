@@ -20,14 +20,15 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
     @Autowired
     protected Mapper<T> mapper;
 
+    @Override
     public int save(T entity){
         return mapper.insertSelective(entity);
     }
-
+    @Override
     public int delete(T entity){
         return mapper.deleteByPrimaryKey(entity);
     }
-
+    @Override
     public int update(T entity) {return mapper.updateByPrimaryKeySelective(entity);}
 
     /**
@@ -37,20 +38,21 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
      * @param pageSize
      * @return
      */
+    @Override
     public List<T> selectPage(int pageNum, int pageSize){
         PageHelper.startPage(pageNum, pageSize);
         //Spring4支持泛型注入
         return mapper.select(null);
     }
-
+    @Override
     public List<T> getAll() {
         return mapper.selectAll();
     }
-
+    @Override
     public List<T> selectByExample(Example example) {
         return mapper.selectByExample(example);
     }
-
+    @Override
     public T selectOne(T t) {
         return mapper.selectOne(t);
     }
