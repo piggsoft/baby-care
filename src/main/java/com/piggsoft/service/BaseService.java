@@ -1,5 +1,7 @@
 package com.piggsoft.service;
 
+import tk.mybatis.mapper.entity.Example;
+
 import java.util.List;
 
 /**
@@ -26,4 +28,7 @@ public interface BaseService<T> {
 
     public List<T> getAll() ;
 
+    List<T> selectByExample(Example example);
+
+    T selectOne(T t);
 }
